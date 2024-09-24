@@ -46,13 +46,13 @@ html, body {
     padding-left: 12px;
 }
 
-.category {
+.category-stack {
     display: flex;
     flex-direction: column;
     text-align: start;
 }
 
-.category-a {
+.category {
     text-decoration: none;
     width: 83%;
     color: #7D2A0C;

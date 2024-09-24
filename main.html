@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pic/breadly-favicon.png">
     <link rel="stylesheet" href="styles/all-style.css">
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,33 +30,33 @@
                 </form>
             </div>
     
-            <div class="category">
-                <a class="category-a" href="">
-                    <div class="breakfast">
+            <div class="category-stack">
+                <a class="category" >
+                    <div class="breakfast" data-category="breakfasts">
                         Завтрак
                     </div>
                 </a>
-                <a class="category-a" href="">
+                <a class="category" href="">
                     <div class="hotbread">
                         Горячие блюда
                     </div>
                 </a>
-                <a class="category-a" href="">
+                <a class="category" href="">
                     <div class="snacks">
                         Закуски
                     </div>
                 </a>
-                <a class="category-a" href="">
+                <a class="category" href="">
                     <div class="salads">
                         Салаты с хлебом
                     </div>
                 </a>
-                <a class="category-a" href="">
+                <a class="category" href="">
                     <div class="desserts">
                         Десерты
                     </div>
                 </a>
-                <a class="category-a" href="">
+                <a class="category" href="">
                     <div class="yesterdays-bread">
                         "Вчерашний хлеб"
                     </div>
@@ -63,7 +64,7 @@
             </div>
         </div>
         
-        <div class="main-page">
+        <div class="main-page" id="main-page">
             <div class="breadly">
                 Breadly
             </div>
@@ -97,35 +98,7 @@
     </div>
 
 
-
-    <script>
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelector('.slides');
-            const totalSlides = document.querySelectorAll('.slide').length;
-
-            // Обработка циклического слайдера
-            if (index >= totalSlides) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = totalSlides - 1;
-            } else {
-                currentSlide = index;
-            }
-
-            const offset = -currentSlide * 100; // смещение в процентах
-            slides.style.transform = `translateX(${offset}%)`; // перемещение слайдов
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
-
-        // Автоматическая смена слайдов каждые 5 секунд
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
-    </script>
+    <script src="scripts/switch.js"></script>
+    <script src="scripts/slider.js"></script>
 </body>
 </html>
