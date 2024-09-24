@@ -1,0 +1,90 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    align-items: center;
+}
+
+.breadly {
+    position: relative;
+    font-size: 7em;
+    font-family: "Spicy Rice", serif;
+    color: #7D2A0C;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 850px; /* максимальная ширина слайдера */
+    margin: auto; 
+    margin-top: 0.3%;
+    margin-bottom: 2%;
+    overflow: hidden; 
+    border-radius: 15px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+.slide {
+    min-width: 100%; 
+    box-sizing: border-box; 
+}
+.slide img {
+    width: 100%;
+    height: 280px; /* высотa для изображений */
+    object-fit: cover; 
+    border-radius: 15px;
+}
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
+
+.prev, .next {
+    border: none;
+    cursor: pointer;
+    font-size: 36px; /* увеличенный размер стрелочек */
+    color: #582C0D; 
+    padding: 0px 20px; 
+    background: none; 
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+    pointer-events: all;
+}
+.prev:hover, .next:hover {
+    color: #965727; 
+}
+
+.welcome-text {
+    font-size: 2.3em;
+    color: #393939;
+    padding: 0 5%;
+}
+
+.arrow-category {
+    margin-right: 75%;
+    margin-top: 2%;
+}
+#arrow-category {
+    width: 13em;
+}
+
+#arrow-text {
+    padding-right: 15em;
+}

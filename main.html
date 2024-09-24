@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/all-style.css">
+    <link rel="stylesheet" href="styles/main-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">    
+    <title>Breadly</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-bar">
+
+            <div class="logo-breadly">
+                <a href="main.html">
+                    <img id="logo" src="pic/хлеб лого.png" alt="">
+                </a>            
+            </div>
+    
+            <div class="search">
+                <form action="" method="get">
+                    <input class="web_search" type="search" placeholder="поиск...">
+                </form>
+            </div>
+    
+            <div class="category">
+                <a class="category-a" href="">
+                    <div class="breakfast">
+                        Завтрак
+                    </div>
+                </a>
+                <a class="category-a" href="">
+                    <div class="hotbread">
+                        Горячие блюда
+                    </div>
+                </a>
+                <a class="category-a" href="">
+                    <div class="snacks">
+                        Закуски
+                    </div>
+                </a>
+                <a class="category-a" href="">
+                    <div class="salads">
+                        Салаты с хлебом
+                    </div>
+                </a>
+                <a class="category-a" href="">
+                    <div class="desserts">
+                        Десерты
+                    </div>
+                </a>
+                <a class="category-a" href="">
+                    <div class="yesterdays-bread">
+                        "Вчерашний хлеб"
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-page">
+            <div class="breadly">
+                Breadly
+            </div>
+
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="pic/117_1722281927.jpg" alt="Слайд 1" style="width:100%;"></div>
+                    <div class="slide"><img src="pic/big_330922.jpg" alt="Слайд 2" style="width:100%;"></div>
+                    <div class="slide"><img src="pic/Zapekanka-iz-cherstvogo-hleba-i-myasa-768x404.jpg" alt="Слайд 3" style="width:100%;"></div>
+                </div>
+                <div class="navigation">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="welcome-text">
+                Добро пожаловать на сайт, где вы найдете вдохновение и разнообразные рецепты, чтобы создать незабываемые блюда с хлебом — от простых закусок до изысканных угощений, которые обязательно порадуют вас и ваших близких!
+            </div>
+
+            <div class="arrow-category">
+                <img id="arrow-category" src="pic/arrow-category.png" alt="">
+            </div>
+
+            <div class="welcome-text" id="arrow-text">
+                Передвигайтесь по сайту с помощью категорий, либо же используйте поиск!
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            // Обработка циклического слайдера
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const offset = -currentSlide * 100; // смещение в процентах
+            slides.style.transform = `translateX(${offset}%)`; // перемещение слайдов
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Автоматическая смена слайдов каждые 5 секунд
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
