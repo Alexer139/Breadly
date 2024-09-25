@@ -1,0 +1,28 @@
+.breakfast-page {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+
+.two-cart-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-category {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    background-color: #f5cf8ea6;
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.img-target-cart {
+    border-radius: 10px;
+    width: 36em;
+}
+
+.text-cart {
+    font-size: 2.5em;
+}
