@@ -69,23 +69,36 @@ html, body {
 footer {
     display: flex;
     flex-direction: row;
-    height: 6em;
+    height: 5em;
     background-color: #3F3C36;
     font-size: 20px;
     color: #ecddb683;
+    padding-top: 1%;
+    padding-left: 3%;
+}
+
+.text-footer {
+    height: 85%;
+    border-right: 1.4px solid #ecddb63f;
+    padding-right: 5.45%;
 }
 
 .contacts {
     display: flex;
     flex-direction: column;
+    margin-left: 1.5%;
 }
 
-.telegram {
+.telegram, .vk {
     display: flex;
     flex-direction: row;
+    gap: 8px;
 }
 
-.vk {
-    display: flex;
-    flex-direction: row;
+#icon-telega, #icon-vk {
+    width: 1.5em;
+}
+
+.url-telega, .url-vk {
+    padding-top: 1.2px;
 }
