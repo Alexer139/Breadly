@@ -65,3 +65,27 @@ html, body {
     border-radius: 7px;
     cursor: pointer;
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 6em;
+    background-color: #3F3C36;
+    font-size: 20px;
+    color: #ecddb683;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.telegram {
+    display: flex;
+    flex-direction: row;
+}
+
+.vk {
+    display: flex;
+    flex-direction: row;
+}
