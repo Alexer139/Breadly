@@ -14,10 +14,10 @@ function loadCategoryContent(category) {
             return response.text();  // Преобразуем ответ в текст (HTML)
         })
         .then(data => {
-            document.getElementById('content').innerHTML = data;  // Вставляем HTML контент в нужный блок
+            document.getElementById('main-page').innerHTML = data;  // Вставляем HTML контент в нужный блок
         })
         .catch(error => {
             console.error('Ошибка:', error);
-            document.getElementById('content').innerHTML = `<p>Ошибка загрузки категории: ${error.message}</p>`;
+            document.getElementById('main-page').innerHTML = `<p>Ошибка загрузки категории: ${error.message}</p>`;
         });
 }
