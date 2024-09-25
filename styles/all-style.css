@@ -4,6 +4,8 @@ html, body {
     padding: 0;
     background-color: #ECDDB6;
     font-family: "Sofia Sans", sans-serif;
+    scrollbar-color: #7D2A0C #F5CF8E;
+    scrollbar-width:thin
 }
 
 .container {
@@ -75,6 +77,10 @@ footer {
     color: #ecddb683;
     padding-top: 1%;
     padding-left: 3%;
+}
+
+footer::-webkit-scrollbar {
+    background-color: darkgrey;
 }
 
 .text-footer {
