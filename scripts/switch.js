@@ -1,24 +1,19 @@
-// Находим все элементы категорий
 document.querySelectorAll('.category').forEach(item => {
     item.addEventListener('click', event => {
-        // Получаем элемент категории (если клик был по тексту)
         const categoryElement = event.target.closest('.category');
         
-        // Убираем класс "active" у всех категорий
         document.querySelectorAll('.category').forEach(el => el.classList.remove('active'));
 
-        // Добавляем класс "active" к выбранной категории
         categoryElement.classList.add('active');
 
-        // Получаем значение data-category для выбранной категории
         const category = categoryElement.getAttribute('data-category');
 
-        // Вызываем функцию загрузки контента для выбранной категории
+        console.log('Категория:', category); 
+
         loadCategoryContent(category);
     });
 });
 
-// Функция для загрузки контента через fetch
 function loadCategoryContent(category) {
     fetch(`${category}.html`)
         .then(response => {
@@ -28,7 +23,6 @@ function loadCategoryContent(category) {
             return response.text();
         })
         .then(data => {
-            // Вставляем загруженный HTML в блок с контентом
             document.getElementById('main-page').innerHTML = data;
         })
         .catch(error => {
