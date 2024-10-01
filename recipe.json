@@ -1,0 +1,36 @@
+{
+    "breakfast": [
+      {
+        "title": "Омлет с хлебом",
+        "description": "Вкусный омлет с добавлением хлеба и овощей.",
+        "image": "pic/goodbread.png"
+      },
+      {
+        "title": "Тост с авокадо",
+        "description": "Легкий и полезный тост с авокадо.",
+        "image": "pic/goodbread.png"
+      }
+    ],
+    "hotbread": [
+      {
+        "title": "Горячий бутерброд с сыром",
+        "description": "Классический горячий бутерброд с расплавленным сыром.",
+        "image": "pic/goodbread.png"
+      }
+    ],
+    "snacks": [
+      {
+        "title": "Мини-бутерброды",
+        "description": "Мини-бутерброды с сыром и колбасой.",
+        "image": "pic/goodbread.png"
+      }
+    ],
+    "desserts": [
+      {
+        "title": "Пудинг с хлебом",
+        "description": "Сладкий пудинг из хлеба с изюмом.",
+        "image": "pic/goodbread.png"
+      }
+    ]
+  }
+  
