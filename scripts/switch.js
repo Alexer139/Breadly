@@ -15,7 +15,7 @@ document.querySelectorAll('.category').forEach(item => {
 });
 
 function loadCategoryContent(category) {
-    fetch(`${category}.html`)
+    fetch(`category's/${category}.html`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ошибка загрузки данных');
