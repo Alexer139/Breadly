@@ -1,13 +1,13 @@
 {
   "recipes": {
-      "recipe1": {
+      "break-one": {
           "title": "Омлет с хлебом",
           "image": "images/omlet.jpg",
           "description": "Вкусный омлет с хлебом и зеленью.",
           "ingredients": ["Яйца", "Хлеб", "Зелень"],
           "instructions": "Смешать яйца с хлебом и обжарить на сковороде."
       },
-      "recipe2": {
+      "break-two": {
           "title": "Тост с авокадо",
           "image": "images/avocado-toast.jpg",
           "description": "Легкий тост с авокадо и специями.",

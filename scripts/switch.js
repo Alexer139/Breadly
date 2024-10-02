@@ -14,6 +14,19 @@ document.querySelectorAll('.category').forEach(item => {
     });
 });
 
+function attachRecipeHandlers() {
+    document.querySelectorAll('.cart-category').forEach(block => {
+        block.addEventListener('click', ecent => {
+            const recipeElement = event.currentTarget;
+            const recipeId = recipeElement.getAttribute('data-recipe');
+            
+            console.log('Руцепт IDЖ:', recipeId);
+
+            loadCategoryContent(recipeId);
+        });
+    });
+}
+
 function loadCategoryContent(category) {
     fetch(`category's/${category}.html`)
         .then(response => {
@@ -24,6 +37,8 @@ function loadCategoryContent(category) {
         })
         .then(data => {
             document.getElementById('main-page').innerHTML = data;
+
+            attachRecipeHandlers();
         })
         .catch(error => {
             console.error('Ошибка:', error);

@@ -1,16 +1,3 @@
-// Обрабатываем клики на каждом блоке рецепта
-document.querySelectorAll('.recipe-block').forEach(block => {
-    block.addEventListener('click', event => {
-        const recipeElement = event.currentTarget;
-        const recipeId = recipeElement.getAttribute('data-recipe');
-
-        console.log('Рецепт:', recipeId);
-
-        // Загружаем данные рецепта
-        loadRecipeContent(recipeId);
-    });
-});
-
 // Функция загрузки содержимого для выбранного рецепта из JSON
 function loadRecipeContent(recipeId) {
     fetch('recipes.json')  // Загружаем JSON файл
@@ -38,13 +25,13 @@ function loadRecipeContent(recipeId) {
                 `;
 
                 // Вставляем сгенерированный HTML в элемент с id 'recipe-content'
-                document.getElementById('recipe-content').innerHTML = recipeHTML;
+                document.getElementById('main-page').innerHTML = recipeHTML;
             } else {
-                document.getElementById('recipe-content').innerHTML = `<p>Рецепт не найден.</p>`;
+                document.getElementById('main-page').innerHTML = `<p>Рецепт не найден.</p>`;
             }
         })
         .catch(error => {
             console.error('Ошибка:', error);
-            document.getElementById('recipe-content').innerHTML = `<p>Ошибка загрузки рецепта: ${error.message}</p>`;
+            document.getElementById('main-page').innerHTML = `<p>Ошибка загрузки рецепта: ${error.message}</p>`;
         });
 }
