@@ -1,6 +1,5 @@
-// Функция загрузки содержимого для выбранного рецепта из JSON
 function loadRecipeContent(recipeId) {
-    fetch('recipes.json')  // Загружаем JSON файл
+    fetch('data/recipes.json')  // Загружаем JSON файл
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ошибка загрузки данных');

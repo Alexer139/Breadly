@@ -20,7 +20,7 @@ function attachRecipeHandlers() {
             const recipeElement = event.currentTarget;
             const recipeId = recipeElement.getAttribute('data-recipe');
             
-            console.log('Руцепт IDЖ:', recipeId);
+            console.log('Рецепт ID:', recipeId);
 
             loadCategoryContent(recipeId);
         });
