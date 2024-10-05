@@ -1,5 +1,5 @@
 function loadRecipeContent(recipeId) {
-    fetch('data/recipes.json')  // Загружаем JSON файл
+    fetch('data/recipes.json') // Загружаем JSON файл с данными рецептов
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ошибка загрузки данных');
@@ -7,10 +7,9 @@ function loadRecipeContent(recipeId) {
             return response.json();
         })
         .then(data => {
-            const recipe = data.recipes[recipeId];
+            const recipe = data.recipes[recipeId]; // Получаем данные конкретного рецепта
             
             if (recipe) {
-                // Генерируем HTML на основе данных рецепта
                 const recipeHTML = `
                     <h2>${recipe.title}</h2>
                     <img src="${recipe.image}" alt="${recipe.title}">
@@ -23,7 +22,6 @@ function loadRecipeContent(recipeId) {
                     <p>${recipe.instructions}</p>
                 `;
 
-                // Вставляем сгенерированный HTML в элемент с id 'recipe-content'
                 document.getElementById('main-page').innerHTML = recipeHTML;
             } else {
                 document.getElementById('main-page').innerHTML = `<p>Рецепт не найден.</p>`;

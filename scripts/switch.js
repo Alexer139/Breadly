@@ -15,20 +15,21 @@ document.querySelectorAll('.category').forEach(item => {
 });
 
 function attachRecipeHandlers() {
-    document.querySelectorAll('.cart-category').forEach(block => {
-        block.addEventListener('click', ecent => {
+    document.querySelectorAll('.cart-category').forEach(item => {
+        item.addEventListener('click', event => {
             const recipeElement = event.currentTarget;
-            const recipeId = recipeElement.getAttribute('data-recipe');
-            
+            const recipeId = recipeElement.getAttribute('data-recipe'); // ID рецепта в атрибуте data-recipe
+
             console.log('Рецепт ID:', recipeId);
 
-            loadCategoryContent(recipeId);
+            loadRecipeContent(recipeId); // Загружаем рецепт по ID
         });
     });
 }
 
+
 function loadCategoryContent(category) {
-    fetch(`category's/${category}.html`)
+    fetch(`categorys/${category}.html`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Ошибка загрузки данных');
