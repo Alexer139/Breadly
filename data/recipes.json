@@ -1,7 +1,6 @@
 {
   "recipes": {
       "break-one": {
-            "id": "break-one",
             "title": "Омлет с хлебом",
             "image": "images/omlet.jpg",
             "description": "Вкусный омлет с хлебом и зеленью.",
