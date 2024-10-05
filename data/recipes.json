@@ -2,7 +2,7 @@
   "recipes": {
       "break-one": {
             "title": "Омлет с хлебом",
-            "image": "images/omlet.jpg",
+            "image": "pic/breakf1.png",
             "description": "Вкусный омлет с хлебом и зеленью.",
             "ingredients": ["Яйца", "Хлеб", "Зелень"],
             "instructions": "Смешать яйца с хлебом и обжарить на сковороде."
