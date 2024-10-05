@@ -11,15 +11,52 @@ function loadRecipeContent(recipeId) {
             
             if (recipe) {
                 const recipeHTML = `
-                    <h2>${recipe.title}</h2>
-                    <img src="${recipe.image}" alt="${recipe.title}">
-                    <p><strong>Описание:</strong> ${recipe.description}</p>
-                    <h3>Ингредиенты:</h3>
-                    <ul>
-                        ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                    </ul>
-                    <h3>Инструкции:</h3>
-                    <p>${recipe.instructions}</p>
+                    <div class="mainRecipePage">
+        
+                        <div class="picAndNamed">
+
+                            <div class="pictureRecipe">
+                                <img src="${recipe.image}" alt="${recipe.title}">
+                            </div>
+
+                            <div class="nameAndIngrend">
+
+                                <div class="name">
+                                    ${recipe.title}
+                                </div>
+                                <div class="ingrendients">
+                                    Ингредиенты:
+                                </div>
+                                <div class="components">
+                                    <ul>
+                                        ${recipe.ingredients.map(ingredient => `<li>${ingredient}<li>`).join('')}
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="description">
+                        
+                            <div class="preparation">
+                                Приготовление:
+                            <div>
+
+                            <div class="onePart">
+                                <span>1</span> ${recipe.instructOne}
+                            <div>
+                            <div class="twoPart">
+                                <span>2</span> ${recipe.instructTwo}
+                            <div>
+                            <div class="threePart">
+                                <span>3</span> ${recipe.instructThree}
+                            <div>
+                            <div class="fourPart">
+                                <span>4</span> ${recipe.instructFour}
+                            <div> 
+                        </div>
+                    </div>
                 `;
 
                 document.getElementById('main-page').innerHTML = recipeHTML;
