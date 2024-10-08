@@ -17,7 +17,7 @@
 
 .pictureRecipe img {
     width: 43em;
-    height: auto;
+    height: 20em;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -25,6 +25,7 @@
 .name {
     font-size: 3.3rem;
     font-weight: 500;
+    width: 7.3em;
     margin-bottom: 20px;
 }
 
@@ -32,6 +33,7 @@
     list-style-type:none;
     padding-left: 0;
     font-size: 1.8rem;
+    width: 15em;
 }
 
 .ingrendients,
@@ -42,16 +44,18 @@
 }
 
 .onePart, .twoPart, .threePart, .fourPart {
+    display:list-item;
+    list-style-position: inside;
+    width: 40em;
     margin-top: 10px;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.onePart span, .twoPart span, .threePart span, .fourPart span {
-    margin-right: 5px;
-    font-size: 4rem;
-    font-weight: 400;
-}
+.onePart::marker {content: "1"; font-size: 2.5em;}
+.twoPart::marker {content: "2"; font-size: 2.5em;}
+.threePart::marker {content: "3"; font-size: 2.5em;} 
+.fourPart::marker {content: "4"; font-size: 2.5em;}
 
 .description {
     margin-top: 20px;

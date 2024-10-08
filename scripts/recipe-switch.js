@@ -51,17 +51,17 @@ function loadRecipeContent(recipeId) {
                             <div>
 
                             <div class="onePart">
-                                <span>1</span> ${recipe.instructOne}
-                            <div>
+                                ${recipe.instructOne}
+                            </div>
                             <div class="twoPart">
-                                <span>2</span> ${recipe.instructTwo}
-                            <div>
+                                ${recipe.instructTwo}
+                            </div>
                             <div class="threePart">
-                                <span>3</span> ${recipe.instructThree}
-                            <div>
+                                ${recipe.instructThree}
+                            </div>
                             <div class="fourPart">
-                                <span>4</span> ${recipe.instructFour}
-                            <div> 
+                                ${recipe.instructFour}
+                            </div> 
                         </div>
                     </div>
                 `;
