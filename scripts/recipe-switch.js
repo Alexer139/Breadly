@@ -8,6 +8,13 @@ function loadRecipeContent(recipeId) {
         })
         .then(data => {
             const recipe = data.recipes[recipeId]; // Получаем данные конкретного рецепта
+
+            console.log(recipe.ingredients);
+
+            const ingrendientsList = recipe.ingredients
+                .filter(item => item.trim() !== '')
+                .map(item => `<li>${item.trim()}</li>`)
+                .join('');
             
             if (recipe) {
                 const recipeHTML = `
@@ -27,9 +34,9 @@ function loadRecipeContent(recipeId) {
                                 <div class="ingrendients">
                                     Ингредиенты:
                                 </div>
-                                <div class="components">
+                                <div class="components" ingredients-list>
                                     <ul>
-                                        ${recipe.ingredients.map(ingredient => `<li>${ingredient}<li>`).join('')}
+                                        ${ingrendientsList}
                                     </ul>
                                 </div>
 

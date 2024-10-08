@@ -1,0 +1,59 @@
+.mainRecipePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: -5%;
+}
+
+.picAndNamed {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-bottom: 20px;
+    gap: 2rem;
+}
+
+.pictureRecipe img {
+    width: 43em;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 3.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.components ul {
+    list-style-type:none;
+    padding-left: 0;
+    font-size: 1.8rem;
+}
+
+.ingrendients,
+.preparation {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.onePart, .twoPart, .threePart, .fourPart {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.onePart span, .twoPart span, .threePart span, .fourPart span {
+    margin-right: 5px;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.description {
+    margin-top: 20px;
+    width: 100%;
+}
