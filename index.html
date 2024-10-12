@@ -30,8 +30,9 @@
     
             <div class="search">
                 <form action="" method="get">
-                    <input class="web_search" type="search" placeholder="поиск...">
+                    <input class="web_search" type="search" id="recipe-search" placeholder="поиск...">
                 </form>
+                <div id="search-suggestions" class="suggestions"></div>
             </div>
     
             <div class="category-stack">
@@ -119,6 +120,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="scripts/recipe-search.js"></script>
     <script src="scripts/recipe-switch.js"></script>
     <script src="scripts/switch.js"></script>
     <script src="scripts/slider.js"></script>
